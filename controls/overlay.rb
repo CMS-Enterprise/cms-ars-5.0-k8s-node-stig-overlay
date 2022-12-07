@@ -12,3 +12,23 @@ include_controls 'k8s-node-stig-baseline' do
       end
     end
   end
+
+  ## Semantic changes
+
+  control 'V-242382' do
+  desc  "To mitigate the risk of unauthorized access to sensitive information
+  by entities that have been issued certificates by CMS-approved PKIs, all CMS
+  systems (e.g., networks, web servers, and web portals) must be properly
+  configured to incorporate access control methods that do not rely solely on the
+  possession of a certificate for access. Successful authentication must not
+  automatically give an entity access to an asset or security boundary.
+  Authorization procedures and controls must be implemented to ensure each
+  authenticated entity also has a validated and current authorization.
+  Authorization is the process of determining whether an entity, once
+  authenticated, is permitted to access a specific asset.
+
+    Node,RBAC is the method within Kubernetes to control access of users and
+  applications. Kubernetes uses roles to grant authorization API requests made by
+  kubelets."
+  end
+end
