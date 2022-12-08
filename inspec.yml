@@ -23,15 +23,68 @@ depends:
     desc: 'List of inapplicable controls/requirements in ARS 5.0 based on the system categorization'
     type: Array
     <% if ENV['BASELINE'] == 'High-HVA' %>
-    value: []
+    value: 
+      - "V-242436" # AC-6 (8)  
     <% elsif ENV['BASELINE'] == 'High' %>
-    value: []
+    value: 
+      - "V-242436" # AC-6 (8)
     <% elsif ENV['BASELINE'] == 'Moderate-HVA' %>
-    value: []
+    value: 
+      - "V-242436" # AC-6 (8)
     <% elsif ENV['BASELINE'] == 'Moderate' || ENV['BASELINE'].nil? %> # Default
-    value: []
+    value: 
+      - "V-242436" # AC-6 (8)
+      - "V-242434" # SC-3
     <% elsif ENV['BASELINE'] == 'Low-HVA' %>
-    value: []
+    value: 
+      - "V-242436" # AC-6 (8)
+      - "V-242381" # AC-2 (1)
+      - "V-242416" # SC-10
+      - "V-242418" # SC-23
+      - "V-242419" # SC-23
+      - "V-242420" # SC-23
+      - "V-242421" # SC-23
+      - "V-242422" # SC-23
+      - "V-242423" # SC-23
+      - "V-242424" # SC-23
+      - "V-242425" # SC-23
+      - "V-242426" # SC-23
+      - "V-242427" # SC-23
+      - "V-242428" # SC-23
+      - "V-242429" # SC-23
+      - "V-242430" # SC-23
+      - "V-242431" # SC-23
+      - "V-242432" # SC-23
+      - "V-242433" # SC-23
     <% elsif ENV['BASELINE'] == 'Low' %>
-    value: []
+    value: 
+      - "V-242436" # AC-6 (8)
+      - "V-242376" # AC-17 (2)
+      - "V-242377" # AC-17 (2)
+      - "V-242378" # AC-17 (2)
+      - "V-242379" # AC-17 (2)
+      - "V-242380" # AC-17 (2)
+      - "V-242381" # AC-2 (1)
+      - "V-242416" # SC-10
+      - "V-242418" # SC-23
+      - "V-242419" # SC-23
+      - "V-242420" # SC-23
+      - "V-242421" # SC-23
+      - "V-242422" # SC-23
+      - "V-242423" # SC-23
+      - "V-242424" # SC-23
+      - "V-242425" # SC-23
+      - "V-242426" # SC-23
+      - "V-242427" # SC-23
+      - "V-242428" # SC-23
+      - "V-242429" # SC-23
+      - "V-242430" # SC-23
+      - "V-242431" # SC-23
+      - "V-242432" # SC-23
+      - "V-242433" # SC-23
+      - "V-242434" # SC-3
+      - "V-242439" # SC-8
+      - "V-242440" # SC-8
+      - "V-242441" # SC-8
+      - "V-242468" # AC-17 (2)
     <% end %>
