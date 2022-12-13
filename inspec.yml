@@ -14,6 +14,12 @@ depends:
 - name: k8s-node-stig-baseline
   url: https://github.com/mitre/k8s-node-stig-baseline/archive/main.tar.gz
 
+  - name: audit_log_retention_days
+    description: 'Number of days to retain audit logs locally'
+    type: Numeric
+    value: 90
+    profile: k8s-node-stig-baseline
+
   - name: system_categorization
     desc: "Selected system baseline based on the environment variable"
     type: String
