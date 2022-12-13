@@ -11,9 +11,10 @@ supports:
 - platform: k8s
 
 depends:
-- name: k8s-node-stig-baseline
-  url: https://github.com/mitre/k8s-node-stig-baseline/archive/main.tar.gz
+  - name: k8s-node-stig-baseline
+    url: https://github.com/mitre/k8s-node-stig-baseline/archive/parameterize.tar.gz
 
+inputs:
   - name: audit_log_retention_days
     description: 'Number of days to retain audit logs locally'
     type: Numeric
