@@ -3,16 +3,6 @@ system_categorization = input('system_categorization')
 
 include_controls 'k8s-node-stig-baseline' do
 
-  ## NA due to the requirement not included in CMS ARS 5.0
-  unless overlay_controls.empty?
-    overlay_controls.each do |overlay_control|
-      control overlay_control do
-        impact 0.0
-        desc "caveat", "Not applicable for this CMS ARS 5.0 overlay, since the requirement is not included in CMS ARS 5.0"
-      end
-    end
-  end
-
   ## Semantic changes
 
   control 'V-242382' do
@@ -30,5 +20,16 @@ include_controls 'k8s-node-stig-baseline' do
     Node,RBAC is the method within Kubernetes to control access of users and
   applications. Kubernetes uses roles to grant authorization API requests made by
   kubelets."
+  end
+
+  
+  ## NA due to the requirement not included in CMS ARS 5.0
+  unless overlay_controls.empty?
+    overlay_controls.each do |overlay_control|
+      control overlay_control do
+        impact 0.0
+        desc "caveat", "Not applicable for this CMS ARS 5.0 overlay, since the requirement is not included in CMS ARS 5.0"
+      end
+    end
   end
 end
