@@ -13,7 +13,7 @@ supports:
 
 depends:
   - name: k8s-node-stig-baseline
-    url: https://github.com/mitre/k8s-node-stig-baseline/archive/parameterize.tar.gz
+    url: https://github.com/mitre/k8s-node-stig-baseline/archive/main.tar.gz
 
 inputs:
   - name: audit_log_retention_days
